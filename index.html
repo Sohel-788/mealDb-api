@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Db api</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class='mt-5'>
+        <div class="container">
+            <h1 class='text-success text-center'>Search your favorite food</h1>
+
+            <!-- food search area -->
+            <div class="input-group mb-3 w-50 text-center mx-auto">
+                <input type="text" id='searchField' class="form-control" placeholder="Search your desired food"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick='searchFood()' class="btn btn-outline-secondary" type="button"
+                    id="button-addon2">Search</button>
+            </div>
+            <!-- single food detail area -->
+            <div id="singleFoodDetail" style="width: 20rem;" class='mx-auto'>
+               
+            </div>
+            <!-- food search result area -->
+            <div class="row row-cols-1 row-cols-md-3 g-4" id='searchResult'>
+
+            </div>
+            <div class='mx-auto text-danger mt-4 text-center'>
+            <p id='emptyField'></p>    
+            <p id='errorM'>Something went wrong, Please try again later</p>    
+            </div>
+    </main>
+    <!-- the two script tag will be gived same result -->
+    <!-- <script src="mealDb.js"></script> -->
+    <!-- // applying asyncronise and await method -->
+    <script src="mealDbAsync.js"></script>
+</body>
+
+</html>
